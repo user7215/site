@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <script>
 const CONFIG_URL = "insert cloudflared url here"
-//----------------
-const checkDiv = document.getElementById("checkDiv")
 </script>
 <div id="checkDiv">Checking if website is up...</div>
 <script>
-var request;
+let request;
+const checkDiv = document.getElementById("checkDiv");
 if (window.XMLHttpRequest){
     request = new XMLHttpRequest();
     request.open('HEAD', CONFIG_URL, false);
