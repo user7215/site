@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<script>
+const CONFIG_URL = "insert cloudflared url here"
+//----------------
+const checkDiv = document.getElementById("checkDiv")
+</script>
+<div id="checkDiv">Checking if website is up...</div>
+<script>
+var request;
+if (window.XMLHttpRequest){
+    request = new XMLHttpRequest();
+    request.send();
+    if (request.status === 404) checkDiv.innerText = "I'm sorry, the server is down right now. 😭";
+    else location.href = CONFIG_URL;
+} else location.href = CONFIG_URL;
+</script>
