@@ -2,9 +2,12 @@
 <script>
     const CONFIG_URL = "https://gifts-shirts-limitations-coordinated.trycloudflare.com"
 </script>
-<div>Redirecting...</div>
+<div id="displayText")>Redirecting...</div>
 <script>
-    const checkDiv = document.getElementById("checkDiv");
-    location.href = CONFIG_URL;
+    const display = document.getElementById("displayText");
+    const params = new URLSearchParams(location.search);
+    let path = params.get("path");
+    if (path) { display.innerText = "Found path, redirecting..."; URL = CONFIG_URL + path; } else URL = CONFIG_URL;
+    location.href = URL;
     checkDiv.innerText = "If you see this, something is wrong with your browser."
 </script>
