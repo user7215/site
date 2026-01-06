@@ -13,4 +13,7 @@ if (window.XMLHttpRequest){
     if (request.status < 200 || request.status >= 300) checkDiv.innerText = "I'm sorry, the server is down right now. 😭";
     else location.href = CONFIG_URL;
 } else location.href = CONFIG_URL;
+    request.onError = function(){
+        checkDiv.innerText = "I'm sorry, the server is down right now. 😭";  
+    };
 </script>
