@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <script>
-const CONFIG_URL = "https://gifts-shirts-limitations-coordinated.trycloudflare.com"
+    const CONFIG_URL = "https://gifts-shirts-limitations-coordinated.trycloudflare.com"
 </script>
-<div id="checkDiv">Checking if website is up...</div>
+<div>Redirecting...</div>
 <script>
-let request;
-const checkDiv = document.getElementById("checkDiv");
-if (window.XMLHttpRequest){
-    request = new XMLHttpRequest();
-    request.open('HEAD', CONFIG_URL, false);
-    request.send();
-    if (request.status < 200 || request.status >= 300) checkDiv.innerText = "I'm sorry, the server is down right now. 😭";
-    else location.href = CONFIG_URL;
-} else location.href = CONFIG_URL;
-    request.onError = function(){
-        checkDiv.innerText = "I'm sorry, the server is down right now. 😭";  
-    };
+    const checkDiv = document.getElementById("checkDiv");
+    location.href = CONFIG_URL;
+    checkDiv.innerText = "If you see this, something is wrong with your browser."
 </script>
